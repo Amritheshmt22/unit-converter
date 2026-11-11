@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Frontend practice project</p>
+      <h1 id="page-title">Unit Converter</h1>
+      <p class="intro">Convert common length, weight and temperature units with instant results in the browser.</p>
+    </section>
+
+    <section class="converter-card" aria-label="Unit converter">
+      <div class="field-group">
+        <label for="categorySelect">Category</label>
+        <select id="categorySelect">
+          <option value="length">Length</option>
+          <option value="weight">Weight</option>
+          <option value="temperature">Temperature</option>
+        </select>
+      </div>
+
+      <div class="converter-grid">
+        <div class="field-group value-field">
+          <label for="valueInput">Value</label>
+          <input id="valueInput" type="number" inputmode="decimal" value="1" step="any">
+        </div>
+
+        <div class="field-group">
+          <label for="fromUnit">From</label>
+          <select id="fromUnit"></select>
+        </div>
+
+        <button id="swapButton" class="swap-button" type="button" aria-label="Swap units">Swap</button>
+
+        <div class="field-group">
+          <label for="toUnit">To</label>
+          <select id="toUnit"></select>
+        </div>
+      </div>
+
+      <div class="result-panel" aria-live="polite">
+        <span class="result-label">Result</span>
+        <strong id="resultText">-</strong>
+        <p id="formulaText">Enter a value to convert.</p>
+      </div>
+
+      <div class="actions">
+        <button id="resetButton" class="secondary-button" type="button">Reset</button>
+      </div>
+
+      <p id="statusMessage" class="status-message">Ready.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
